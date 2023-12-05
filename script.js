@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
       buscarCepButton.textContent = "Buscar CEP";
 
       const mapaIframe = document.createElement('iframe');
-      mapaIframe.src = `https://uol.com.br?cep=${cep}`;
+      mapaIframe.src = `https://www.openstreetmap.org/?cep=${cep}`;
       mapaIframe.width = "100%";
       mapaIframe.height = "400";
       mapaIframe.frameBorder = "0";
@@ -91,3 +91,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
 })
+
+
