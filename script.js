@@ -72,9 +72,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       buscarCepButton.classList.remove('bg-blue-300', 'cursor-not-allowed');
       buscarCepButton.textContent = "Buscar CEP";
-
+      
       const mapaIframe = document.createElement('iframe');
-      mapaIframe.src = `https://www.openstreetmap.org/?cep=${cep}`;
+      const latitude = data?.location?.lat || 0;
+      const longitude = data?.location?.lon || 0;
+
+      mapaIframe.src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyBUI1fD4y8J4-Bl3LVrhQJxV917eTjodRA&zoom=14&center=-23.55052,-46.633308&q=Endereço+Desejado";
       mapaIframe.width = "100%";
       mapaIframe.height = "400";
       mapaIframe.frameBorder = "0";
@@ -90,6 +93,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
   });
-})
-
-
+});
