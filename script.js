@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const mapaIframe = document.createElement('iframe');
       mapaIframe.src = `https://uol.com.br?cep=${cep}`;
       mapaIframe.width = "100%";
-      mapaIframe.height = "300";
+      mapaIframe.height = "400";
       mapaIframe.frameBorder = "0";
       mapaIframe.style.border = "0";
       console.log(mapaIframe, '1 ---------------');
