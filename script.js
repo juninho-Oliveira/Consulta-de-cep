@@ -72,19 +72,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
       buscarCepButton.classList.remove('bg-blue-300', 'cursor-not-allowed');
       buscarCepButton.textContent = "Buscar CEP";
-      
-      const mapaIframe = document.createElement('iframe');
-      const latitude = data?.location?.lat || 0;
-      const longitude = data?.location?.lon || 0;
 
-      mapaIframe.src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyBUI1fD4y8J4-Bl3LVrhQJxV917eTjodRA&zoom=14&center=-23.55052,-46.633308&q=Endereço+Desejado";
+      const logradouro = data.cep; 
+
+      const mapaIframe = document.createElement('iframe');
+      mapaIframe.src = `https://www.google.com/maps/embed/v1/place?key=AIzaSyAglC-D9fpNs-GrPMqC_ZV9Y6kxab8CIa4&zoom=14&q=${encodeURIComponent(logradouro)}`;
       mapaIframe.width = "100%";
       mapaIframe.height = "400";
-      mapaIframe.frameBorder = "0";
       mapaIframe.style.border = "0";
-      console.log(mapaIframe, '1 ---------------');
-      mapa.appendChild(mapaIframe);
-      console.log(mapaIframe, '2 ---------------');
+      document.getElementById('mapa').appendChild(mapaIframe);
+
 
     } catch (error) {
       console.error(error);
