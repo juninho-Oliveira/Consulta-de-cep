@@ -79,7 +79,11 @@ document.addEventListener('DOMContentLoaded', () => {
       mapaIframe.src = `https://www.google.com/maps/embed/v1/place?key=AIzaSyAglC-D9fpNs-GrPMqC_ZV9Y6kxab8CIa4&zoom=14&q=${encodeURIComponent(logradouro)}`;
       mapaIframe.width = "100%";
       mapaIframe.height = "400";
+      mapaIframe.frameBorder = "0";
       mapaIframe.style.border = "0";
+      console.log(mapaIframe, '1 ---------------');
+      mapa.appendChild(mapaIframe);
+      console.log(mapaIframe, '2 ---------------');
       document.getElementById('mapa').appendChild(mapaIframe);
 
 
